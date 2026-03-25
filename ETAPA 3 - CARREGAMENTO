@@ -1,0 +1,24 @@
+Objetivo:
+
+Enviar as mensagens geradas de volta para a API.
+
+############################################
+
+for usuario in usuarios:
+    payload = {
+        "user_id": usuario["id"],
+        "mensagem": usuario["mensagem"]
+    }
+
+    response = requests.post(
+        "https://api.santander.com/messages",
+        json=payload
+    )
+
+    print(response.status_code)
+
+##############################################
+
+Fluxo do Pipeline
+
+CSV → API → IA → API
