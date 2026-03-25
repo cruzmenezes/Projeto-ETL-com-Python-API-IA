@@ -1,0 +1,19 @@
+Objetivo:
+
+Gerar mensagens personalizadas usando Inteligência Artificial.
+
+##########################################################
+
+from openai import OpenAI
+
+client = OpenAI(api_key="SUA_API_KEY")
+
+def gerar_mensagem(nome):
+    prompt = f"Crie uma mensagem de marketing amigável para {nome}"
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    return response.choices[0].message.content
