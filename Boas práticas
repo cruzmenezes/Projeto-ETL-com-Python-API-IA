@@ -1,0 +1,25 @@
+Separar em funções
+
+###########
+
+def extrair():
+    pass
+
+def transformar():
+    pass
+
+def carregar():
+    pass
+
+##########
+
+Adicionar logs
+
+print("Buscando usuários...")
+
+##########
+
+Tratar erros
+
+if response.status_code != 200:
+    print("Erro ao buscar usuário")
