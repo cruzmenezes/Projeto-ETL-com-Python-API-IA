@@ -1,0 +1,17 @@
+etl-project/
+├── dados.csv
+├── main.py
+└── requirements.txt
+
+
+---
+
+## 📊 Exemplo do arquivo CSV
+
+Arquivo: `dados.csv`
+
+```csv
+user_id
+1
+2
+3
