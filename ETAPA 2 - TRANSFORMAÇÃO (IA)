@@ -17,3 +17,15 @@ def gerar_mensagem(nome):
     )
 
     return response.choices[0].message.content
+
+
+
+###########################################################
+
+Aplicando nos usuários:
+
+for usuario in usuarios:
+    nome = usuario["name"]
+    mensagem = gerar_mensagem(nome)
+    
+    usuario["mensagem"] = mensagem
