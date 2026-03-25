@@ -1,0 +1,21 @@
+Objetivo:
+
+Ler a planilha e buscar dados dos usuários na API.
+
+#########################################
+
+import pandas as pd
+import requests
+
+# Ler planilha
+df = pd.read_csv("dados.csv")
+
+usuarios = []
+
+for user_id in df["user_id"]:
+    response = requests.get(f"https://api.santander.com/users/{user_id}")
+    
+    if response.status_code == 200:
+        usuarios.append(response.json())
+
+print(usuarios)
